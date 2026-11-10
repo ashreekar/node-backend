@@ -18,7 +18,8 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-// routes
+app.use("/api/users", userRoutes)
+app.use("/api/todo", todoRoutes)
 
 app.use(errorHandler);
 
